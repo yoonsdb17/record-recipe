@@ -1,5 +1,5 @@
 // 기록 레시피 서비스 워커: 인터넷이 없어도 앱이 열리게 파일을 저장해 둬요.
-const CACHE = "record-recipe-v1";
+const CACHE = "record-recipe-v1.1";
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener("activate", e => {
